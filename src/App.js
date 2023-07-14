@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js</code> and save to reload. Is this working?
         </p>
         <a
           className="App-link"
@@ -16,7 +16,14 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a><br></br>
+        <heading><h2>This is a heading.</h2></heading>
+        <p>and another paragraph element.</p>
+        <ul>
+          <li>ul item 1</li>
+          <li>ul item 2</li>
+          <li>ul item 3</li>
+        </ul>
       </header>
     </div>
   );
