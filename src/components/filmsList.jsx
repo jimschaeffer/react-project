@@ -1,12 +1,15 @@
 import { Component } from "react";
+import "./filmsList.css";
 
 class FilmsList extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.state = {
-            list: []
-        }
+            list: [],
+        };
+
+        console.log(props);
     }
 
     getFilms(){
@@ -23,17 +26,24 @@ class FilmsList extends Component{
         })
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.getFilms();
     }
     
     render() {
-        return <ul>
-            {this.state.list.map((item) => {
-                return <li key={item.id}>{item.title}</li>
+        return (
+        <ul>
+            {this.state.list.map((film) => {
+                return <li key={film.id}>
+                    <h2>{film.title}</h2>
+                    <p>{film.release_date}</p>
+                    <p>Critics: {film.rt_score}%</p>
+                    <img src={film.image} alt={film.title + " banner"} />
+                </li>;
             })}
         </ul>
-}
+        );
+    }
 }
 
 export default FilmsList;

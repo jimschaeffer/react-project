@@ -1,0 +1,17 @@
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+li {
+    border-radius: 50px;
+    background-color: rgba(171, 187, 219, .5);
+    list-style: none;
+    color: black;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
